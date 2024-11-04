@@ -33,12 +33,9 @@ def solve_nqueens_util(board, col, n):
 
 def solve_nqueens(n):
     board = [[0 for _ in range(n)] for _ in range(n)]
-    board[0][0]=1
+    board[0][0] = 1
     if not solve_nqueens_util(board, 1, n):
         print("No solution exists")
-    else:
-        print("Final solution:")
-        print_board(board)
 
 n = int(input("Enter the size of the board (N): "))
 solve_nqueens(n)
